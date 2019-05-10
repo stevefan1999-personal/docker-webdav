@@ -3,6 +3,10 @@ FROM nginx:stable
 ARG http_proxy
 ARG https_proxy
 
+RUN apt-get update \
+ && apt-get install -yq --no-install-recommends gosu apache2-utils \
+ && rm -rf /var/lib/apt/lists/*
+
 RUN ln -sf /dev/stderr /var/log/nginx/error.log
 RUN chmod go+rwX -R /var /run
 VOLUME /media
