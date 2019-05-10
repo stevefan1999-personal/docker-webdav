@@ -1,4 +1,4 @@
-FROM ubuntu:disco
+FROM ubuntu:xenial
 
 ARG http_proxy
 ARG https_proxy
