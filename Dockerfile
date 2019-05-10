@@ -1,4 +1,4 @@
-FROM ubuntu:xenial-20170410
+FROM ubuntu:xenial
 
 ARG http_proxy
 ARG https_proxy
